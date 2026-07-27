@@ -636,6 +636,81 @@ a {
     margin-bottom: 1rem;
 }
 
+/* INSTAGRAM SHOWCASE */
+.instagram-section {
+    background-color: var(--bg-secondary);
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+.instagram-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+}
+
+.insta-card {
+    position: relative;
+    aspect-ratio: 1;
+    overflow: hidden;
+    background: #000;
+    border: 1px solid var(--border-subtle);
+    display: block;
+}
+
+.insta-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.insta-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(7, 7, 7, 0.85);
+    backdrop-filter: blur(8px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    text-align: center;
+    opacity: 0;
+    transition: var(--transition-fast);
+}
+
+.insta-card:hover img {
+    transform: scale(1.1);
+}
+
+.insta-card:hover .insta-overlay {
+    opacity: 1;
+}
+
+.insta-icon {
+    font-size: 1.8rem;
+    margin-bottom: 0.8rem;
+}
+
+.insta-caption {
+    font-family: var(--font-serif);
+    font-size: 1rem;
+    color: var(--text-primary);
+    margin-bottom: 0.8rem;
+    font-style: italic;
+}
+
+.insta-handle {
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    color: var(--accent);
+    text-transform: uppercase;
+}
+
+@media (max-width: 900px) {
+    .instagram-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
 /* BOUTIQUE / STORE CATALOG */
 .store-section {
     background-color: var(--bg-primary);
