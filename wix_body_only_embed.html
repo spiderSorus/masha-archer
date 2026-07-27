@@ -1,0 +1,185 @@
+<!-- 
+==========================================================================
+MASHA ARCHER - BODY ONLY (NO DUP HEADER/FOOTER) WIX EMBED
+Use this version if keeping Wix's native site header and footer!
+==========================================================================
+-->
+<div id="masha-storefront-wrapper">
+    <style>
+    #masha-storefront-wrapper {
+        --bg-primary: #070707;
+        --bg-secondary: #0e0e10;
+        --bg-tertiary: #161619;
+        --bg-card: rgba(20, 20, 24, 0.7);
+        --accent: #dfba73;
+        --accent-light: #f3d498;
+        --text-primary: #f5f5f7;
+        --text-secondary: #aaaaaf;
+        --text-muted: #75757a;
+        --border-color: rgba(223, 186, 115, 0.18);
+        --border-subtle: rgba(255, 255, 255, 0.08);
+        --font-serif: 'Cormorant Garamond', Georgia, serif;
+        --font-sans: 'Inter', system-ui, sans-serif;
+        background-color: var(--bg-primary);
+        color: var(--text-primary);
+        font-family: var(--font-sans);
+        padding: 2rem;
+    }
+
+    #masha-storefront-wrapper * { box-sizing: border-box; }
+
+    .ms-tag { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.25em; color: var(--accent); display: block; margin-bottom: 0.5rem; }
+    .ms-title { font-family: var(--font-serif); font-size: 2.8rem; line-height: 1.15; margin-bottom: 1rem; color: #fff; }
+
+    .ms-controls { background: var(--bg-card); border: 1px solid var(--border-subtle); padding: 1.5rem; display: flex; flex-direction: column; gap: 1rem; margin-bottom: 2.5rem; }
+    .ms-search-row { display: flex; gap: 1rem; }
+    .ms-search-row input { flex: 1; background: var(--bg-tertiary); border: 1px solid var(--border-subtle); padding: 0.8rem 1rem; color: #fff; outline: none; }
+    .ms-search-row select { background: var(--bg-tertiary); border: 1px solid var(--border-subtle); color: #fff; padding: 0.8rem 1rem; outline: none; }
+
+    .ms-filter-row { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: space-between; }
+    .ms-pills { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+    .ms-btn { background: var(--bg-tertiary); border: 1px solid var(--border-subtle); color: var(--text-secondary); padding: 0.5rem 1rem; font-size: 0.8rem; cursor: pointer; }
+    .ms-btn.active { background: var(--accent); color: #000; font-weight: 600; }
+
+    .ms-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+    .ms-card { background: var(--bg-secondary); border: 1px solid var(--border-subtle); cursor: pointer; transition: all 0.3s ease; display: flex; flex-direction: column; }
+    .ms-card:hover { border-color: var(--border-color); transform: translateY(-5px); }
+    .ms-img-box { width: 100%; aspect-ratio: 4/5; overflow: hidden; background: #000; }
+    .ms-img-box img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+    .ms-card:hover .ms-img-box img { transform: scale(1.05); }
+    .ms-info { padding: 1.2rem; display: flex; flex-direction: column; flex: 1; }
+    .ms-item-title { font-family: var(--font-serif); font-size: 1.2rem; margin-bottom: 0.4rem; color: #fff; }
+    .ms-item-price { font-family: var(--font-serif); font-size: 1.1rem; color: var(--accent); margin-bottom: 1rem; }
+    .ms-inquire-btn { width: 100%; padding: 0.6rem; background: var(--bg-tertiary); border: 1px solid var(--border-subtle); color: var(--text-secondary); text-transform: uppercase; font-size: 0.75rem; cursor: pointer; }
+    .ms-inquire-btn:hover { background: var(--accent); color: #000; }
+
+    @media (max-width: 900px) { .ms-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 600px) { .ms-grid { grid-template-columns: 1fr; } }
+    </style>
+
+    <div style="text-align: center; margin-bottom: 2.5rem;">
+        <span class="ms-tag">San Francisco Studio Originals</span>
+        <h2 class="ms-title">Available Masterpieces</h2>
+    </div>
+
+    <div class="ms-controls">
+        <div class="ms-search-row">
+            <input type="text" id="ms-search" placeholder="Search pieces (Gorget, Coral, Amber, Necklace)...">
+            <select id="ms-sort">
+                <option value="featured">Featured Order</option>
+                <option value="price-asc">Price: Low to High</option>
+                <option value="price-desc">Price: High to Low</option>
+                <option value="name-asc">Name: A to Z</option>
+            </select>
+        </div>
+
+        <div class="ms-filter-row">
+            <div class="ms-pills" id="ms-cat-pills">
+                <button class="ms-btn active" data-filter="all">All Pieces</button>
+                <button class="ms-btn" data-filter="necklaces">Necklaces & Collars</button>
+                <button class="ms-btn" data-filter="earrings">Earrings</button>
+            </div>
+            <div class="ms-pills" id="ms-price-pills">
+                <button class="ms-btn active" data-price="all">All Prices</button>
+                <button class="ms-btn" data-price="under-500">Under $500</button>
+                <button class="ms-btn" data-price="500-2000">$500 – $2,000</button>
+                <button class="ms-btn" data-price="above-2000">$2,000+</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="ms-grid" class="ms-grid"></div>
+</div>
+
+<script>
+(function() {
+    const ITEMS = [
+      { id: "1", title: "Masha Archer Red and Black Collar", category: "necklaces", price: "$2,375.00", pNum: 2375, img: "https://images.squarespace-cdn.com/content/v1/56df36ce2fe1316ffbfe01f6/1633625391462-41J3OO24P0OLHZQU4EC0/IMG_7465%2Bsmall.jpg" },
+      { id: "2", title: "Masha Archer Plum Wreath #3 Necklace", category: "necklaces", price: "$575.00", pNum: 575, img: "https://images.squarespace-cdn.com/content/v1/56df36ce2fe1316ffbfe01f6/1633629496518-ULAX7BJ5YSUXLUG7E2E1/IMG_7487.jpg" },
+      { id: "3", title: "Masha Archer Black and Red Wreath", category: "necklaces", price: "$575.00", pNum: 575, img: "https://images.squarespace-cdn.com/content/v1/56df36ce2fe1316ffbfe01f6/1609288606625-GMM0CS1JDH3O6IYZNUO7/IMG_7467+cropped.jpg" },
+      { id: "4", title: "Masha Archer The Merry Widow", category: "necklaces", price: "$2,475.00", pNum: 2475, img: "https://images.squarespace-cdn.com/content/v1/56df36ce2fe1316ffbfe01f6/1609288949185-7GS9C42P1WBY7PPJ30R1/IMG_7477+cropped.jpg" },
+      { id: "5", title: "Masha Archer Black and Green Collar", category: "necklaces", price: "$3,675.00", pNum: 3675, img: "https://images.squarespace-cdn.com/content/v1/56df36ce2fe1316ffbfe01f6/1609288815271-GKYL0COJODICN06Y6C10/IMG_7472+cropped.jpg" },
+      { id: "6", title: "Masha Archer The Main Hearth", category: "necklaces", price: "$2,675.00", pNum: 2675, img: "https://images.squarespace-cdn.com/content/v1/56df36ce2fe1316ffbfe01f6/1609289269421-GG018S41R4W783U1LLZ3/IMG_7492+cropped.jpg" },
+      { id: "7", title: "Masha Archer Green and Red Collar #4", category: "necklaces", price: "$2,875.00", pNum: 2875, img: "https://images.squarespace-cdn.com/content/v1/56df36ce2fe1316ffbfe01f6/1756711053600-UIZWLXFU38N0UTFRFF9W/F57B6975-AFB7-4F3B-9494-B22BB488C136.jpeg" },
+      { id: "8", title: "Masha Archer Blue and Black Wreath #10B", category: "necklaces", price: "$375.00", pNum: 375, img: "https://images.squarespace-cdn.com/content/v1/56df36ce2fe1316ffbfe01f6/1756596659591-4IHJXLLQ2M3GRKZOGLD2/211A1143-49A1-4C2C-98F9-09472DC23F76.jpeg" },
+      { id: "9", title: "Masha Archer Blue Gorget #10", category: "necklaces", price: "$1,875.00", pNum: 1875, img: "https://images.squarespace-cdn.com/content/v1/56df36ce2fe1316ffbfe01f6/1756594836302-79QXMPKDXJLBIVBK892L/F9E2B23C-A055-47BF-B59D-484469BC83AA.jpeg" },
+      { id: "10", title: "Masha Archer Turquoise and Red Gorget #12", category: "necklaces", price: "$1,275.00", pNum: 1275, img: "https://images.squarespace-cdn.com/content/v1/56df36ce2fe1316ffbfe01f6/1756600775149-3BNDQYKDLC2P8AYZB89G/5ED86597-1BBC-469F-A65B-5A56A6DE2412.jpeg" },
+      { id: "11", title: "Masha Archer White and Blue Wreath", category: "necklaces", price: "$475.00", pNum: 475, img: "https://images.squarespace-cdn.com/content/v1/56df36ce2fe1316ffbfe01f6/1609288310168-TZFJ325R5NI4V3CP40MS/IMG_7452+cropped.jpg" },
+      { id: "12", title: "Masha Archer Lavender Mint Glass Collar", category: "necklaces", price: "$1,950.00", pNum: 1950, img: "https://images.squarespace-cdn.com/content/v1/56df36ce2fe1316ffbfe01f6/1609287389958-WC5C3AQJZSF5PHJXP0RU/IMG_7412+cropped.jpg" },
+      { id: "13", title: "Masha Archer White Opalite Spectator", category: "necklaces", price: "$2,375.00", pNum: 2375, img: "https://images.squarespace-cdn.com/content/v1/56df36ce2fe1316ffbfe01f6/1633624740936-W3SK02XRUGWK71MZR2CR/IMG_7460%2Bsmall.jpg" },
+      { id: "14", title: "Masha Archer Turquoise Opalite Wreath #6", category: "necklaces", price: "$1,750.00", pNum: 1750, img: "https://images.squarespace-cdn.com/content/v1/56df36ce2fe1316ffbfe01f6/1756602649501-PHZP8RM93O5D2NXYKOTE/B80BB048-0C9B-4ABE-979B-787B8D9203BE.jpeg" },
+      { id: "15", title: "Masha Archer White Opalite Pastel Wreath #2", category: "necklaces", price: "$575.00", pNum: 575, img: "https://images.squarespace-cdn.com/content/v1/56df36ce2fe1316ffbfe01f6/1756602999633-YAUCKPQNTH7EMTI4TQAD/9DD7ABAA-8F12-4F20-9909-0167D3EBDCBF.jpeg" },
+      { id: "16", title: "Masha Archer Tear Drop Wreath #3", category: "necklaces", price: "$675.00", pNum: 675, img: "https://images.squarespace-cdn.com/content/v1/56df36ce2fe1316ffbfe01f6/1756603471256-5FBLME5LP1W2DQTFGD7X/CCEA4B28-20E0-4E15-A90E-D145E181BA67.jpeg" },
+      { id: "17", title: "Masha Archer Saffron Ziggurat #3b", category: "necklaces", price: "$2,875.00", pNum: 2875, img: "https://images.squarespace-cdn.com/content/v1/56df36ce2fe1316ffbfe01f6/1633627528528-UQT955D2BSDA41NFZ0RT/IMG_7471.JPEG" },
+      { id: "18", title: "Masha Archer Himalayan Wreath #3y", category: "necklaces", price: "$1,750.00", pNum: 1750, img: "https://images.squarespace-cdn.com/content/v1/56df36ce2fe1316ffbfe01f6/1756710996227-GNTJVI1DGPTDPXKMQVGF/63895108-97F5-4D7C-B6E2-B206247986C9.jpeg" },
+      { id: "19", title: "Masha Archer Spiral Motif Earrings", category: "earrings", price: "$225.00", pNum: 225, img: "https://images.squarespace-cdn.com/content/v1/56df36ce2fe1316ffbfe01f6/1633630455961-BKQRAIQ1K2Y4N4KFPIGZ/IMG_7512+small.JPEG" },
+      { id: "20", title: "Masha Archer 'Mahgreb Series' Copal Earrings", category: "earrings", price: "$225.00", pNum: 225, img: "https://images.squarespace-cdn.com/content/v1/56df36ce2fe1316ffbfe01f6/1633630561342-OFP12L7CLKW6KBCQKYQM/IMG_7518+small.JPEG" },
+      { id: "21", title: "Masha Archer Rose Opalite Earrings", category: "earrings", price: "$225.00", pNum: 225, img: "https://images.squarespace-cdn.com/content/v1/56df36ce2fe1316ffbfe01f6/1757035114925-VZ3W1P5NJZGXY8VYN499/342DF423-E410-47B9-B954-211B377DD2AC.jpeg" },
+      { id: "22", title: "Masha Archer Chalcedony Earrings", category: "earrings", price: "$225.00", pNum: 225, img: "https://images.squarespace-cdn.com/content/v1/56df36ce2fe1316ffbfe01f6/1757035310287-APLQQN0SPF4JRPVCBLXN/F871B588-3AD1-4165-906D-B65D6D2B97DA.jpeg" },
+      { id: "23", title: "Masha Archer Amber Earrings", category: "earrings", price: "$225.00", pNum: 225, img: "https://images.squarespace-cdn.com/content/v1/56df36ce2fe1316ffbfe01f6/1757035358064-SNOTUNKDP1BEHIM2F044/4B4BEC0B-A03C-4450-ABD2-442A6EC606D5.jpeg" },
+      { id: "24", title: "Masha Archer Howlite Earrings", category: "earrings", price: "$225.00", pNum: 225, img: "https://images.squarespace-cdn.com/content/v1/56df36ce2fe1316ffbfe01f6/1757035551060-33KCAUCTX111TKXKONLF/2C5707C5-44FE-4E84-AFA7-C918D5F6765B.jpeg" }
+    ];
+
+    function render() {
+        const grid = document.getElementById('ms-grid');
+        if (!grid) return;
+        const q = (document.getElementById('ms-search').value || '').toLowerCase().trim();
+        const catBtn = document.querySelector('#ms-cat-pills .ms-btn.active');
+        const priceBtn = document.querySelector('#ms-price-pills .ms-btn.active');
+        const sortVal = document.getElementById('ms-sort').value;
+
+        const cat = catBtn ? catBtn.dataset.filter : 'all';
+        const pr = priceBtn ? priceBtn.dataset.price : 'all';
+
+        let list = ITEMS.filter(item => {
+            const matchCat = cat === 'all' || item.category === cat;
+            let matchPrice = true;
+            if (pr === 'under-500') matchPrice = item.pNum < 500;
+            else if (pr === '500-2000') matchPrice = item.pNum >= 500 && item.pNum <= 2000;
+            else if (pr === 'above-2000') matchPrice = item.pNum > 2000;
+            const matchSearch = q === '' || item.title.toLowerCase().includes(q);
+            return matchCat && matchPrice && matchSearch;
+        });
+
+        if (sortVal === 'price-asc') list.sort((a,b) => a.pNum - b.pNum);
+        else if (sortVal === 'price-desc') list.sort((a,b) => b.pNum - a.pNum);
+        else if (sortVal === 'name-asc') list.sort((a,b) => a.title.localeCompare(b.title));
+
+        grid.innerHTML = list.map(item => `
+            <div class="ms-card" onclick="window.location.href='mailto:studio@mashaarcher.com?subject=Inquiry:%20${encodeURIComponent(item.title)}'">
+                <div class="ms-img-box">
+                    <img src="${item.img}" alt="${item.title}" loading="lazy">
+                </div>
+                <div class="ms-info">
+                    <h4 class="ms-item-title">${item.title}</h4>
+                    <span class="ms-item-price">${item.price}</span>
+                    <button class="ms-inquire-btn">Acquire / Inquire</button>
+                </div>
+            </div>
+        `).join('');
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        document.getElementById('ms-search').addEventListener('input', render);
+        document.getElementById('ms-sort').addEventListener('change', render);
+
+        document.querySelectorAll('#ms-cat-pills .ms-btn').forEach(btn => {
+            btn.onclick = () => {
+                document.querySelectorAll('#ms-cat-pills .ms-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                render();
+            };
+        });
+
+        document.querySelectorAll('#ms-price-pills .ms-btn').forEach(btn => {
+            btn.onclick = () => {
+                document.querySelectorAll('#ms-price-pills .ms-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                render();
+            };
+        });
+
+        render();
+    });
+})();
+</script>

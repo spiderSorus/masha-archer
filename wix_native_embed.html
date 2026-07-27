@@ -1,0 +1,328 @@
+<!-- 
+==========================================================================
+MASHA ARCHER - NATIVE WIX EMBEDDABLE SINGLE-FILE STOREFRONT
+Copy and paste this ENTIRE block into a Wix Custom HTML Element or Wix Custom Code.
+All styles, scripts, and product catalog are 100% self-contained for native Wix hosting!
+==========================================================================
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masha Archer | Art-to-Wear Fine Statement Jewelry</title>
+    <meta name="description" content="Explore the majestic, one-of-a-kind art-to-wear statement jewelry collections designed by San Francisco artist Masha Archer.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+    /* ==========================================================================
+       MASHA ARCHER - LUXURY FINE JEWELRY STOREFRONT STYLES
+       ========================================================================== */
+    :root {
+        --bg-primary: #070707;
+        --bg-secondary: #0e0e10;
+        --bg-tertiary: #161619;
+        --bg-card: rgba(20, 20, 24, 0.7);
+        --bg-glass: rgba(14, 14, 16, 0.85);
+        --accent: #dfba73;
+        --accent-light: #f3d498;
+        --accent-dark: #b8934a;
+        --accent-glow: rgba(223, 186, 115, 0.25);
+        --text-primary: #f5f5f7;
+        --text-secondary: #aaaaaf;
+        --text-muted: #75757a;
+        --border-color: rgba(223, 186, 115, 0.18);
+        --border-subtle: rgba(255, 255, 255, 0.08);
+        --font-serif: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+        --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+        --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        --transition-fast: all 0.2s ease-out;
+        --shadow-luxury: 0 20px 40px rgba(0, 0, 0, 0.6);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; background-color: var(--bg-primary); color: var(--text-primary); font-family: var(--font-sans); line-height: 1.6; }
+    body { overflow-x: hidden; min-height: 100vh; }
+
+    h1, h2, h3, h4, h5, h6 { font-family: var(--font-serif); font-weight: 400; letter-spacing: 0.03em; color: var(--text-primary); }
+    p { color: var(--text-secondary); font-size: 0.98rem; font-weight: 300; margin-bottom: 1.2rem; }
+    a { color: inherit; text-decoration: none; transition: var(--transition-fast); }
+
+    .announcement-bar { background: linear-gradient(90deg, #09090b 0%, #1c1810 50%, #09090b 100%); border-bottom: 1px solid var(--border-color); text-align: center; padding: 0.5rem 1rem; font-size: 0.82rem; letter-spacing: 0.08em; color: var(--text-secondary); }
+    .announcement-bar a { color: var(--accent); font-weight: 500; }
+
+    .main-header { position: sticky; top: 0; left: 0; width: 100%; z-index: 1000; background-color: var(--bg-glass); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border-subtle); }
+    .header-container { max-width: 1400px; margin: 0 auto; padding: 1.2rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+    .logo-wrapper { display: flex; flex-direction: column; }
+    .logo-text { font-family: var(--font-serif); font-size: 1.7rem; letter-spacing: 0.25em; font-weight: 400; color: var(--text-primary); line-height: 1; }
+    .logo-subtitle { font-size: 0.65rem; letter-spacing: 0.3em; color: var(--accent); margin-top: 4px; text-transform: uppercase; }
+
+    .nav-menu { display: flex; gap: 2.5rem; }
+    .nav-menu a { font-size: 0.85rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-secondary); position: relative; padding-bottom: 4px; }
+    .nav-menu a:hover { color: var(--accent); }
+
+    .header-actions { display: flex; align-items: center; gap: 1rem; }
+    .header-btn { background: rgba(255, 255, 255, 0.05); border: 1px solid var(--border-subtle); color: var(--text-primary); padding: 0.5rem 0.9rem; border-radius: 4px; cursor: pointer; display: flex; align-items: center; gap: 0.4rem; font-size: 0.9rem; }
+    .badge { background: var(--accent); color: var(--bg-primary); font-size: 0.7rem; font-weight: 600; padding: 2px 6px; border-radius: 10px; }
+
+    .btn { display: inline-flex; align-items: center; justify-content: center; padding: 0.9rem 2.2rem; font-family: var(--font-sans); font-size: 0.85rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; cursor: pointer; transition: var(--transition); text-align: center; border: none; }
+    .btn-primary { background-color: var(--accent); color: var(--bg-primary); border: 1px solid var(--accent); }
+    .btn-primary:hover { background-color: transparent; color: var(--accent); box-shadow: 0 0 25px var(--accent-glow); }
+    .btn-secondary { background: transparent; color: var(--text-primary); border: 1px solid var(--border-color); }
+    .btn-block { display: flex; width: 100%; }
+
+    .section-container { max-width: 1300px; margin: 0 auto; padding: 6rem 2rem; }
+    .section-tag { display: block; font-size: 0.75rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.25em; color: var(--accent); margin-bottom: 1rem; }
+    .section-title { font-size: 3rem; line-height: 1.15; margin-bottom: 1.5rem; }
+    .section-lead { font-size: 1.1rem; color: var(--text-secondary); max-width: 700px; margin: 0 auto 3rem auto; }
+    .text-center { text-align: center; }
+
+    .hero-section { position: relative; min-height: 80vh; display: flex; align-items: center; justify-content: center; padding: 6rem 2rem; background: radial-gradient(circle at 50% 30%, rgba(30, 25, 15, 0.8) 0%, rgba(7, 7, 7, 0.98) 70%); border-bottom: 1px solid var(--border-subtle); }
+    .hero-content { relative; z-index: 2; max-width: 900px; text-align: center; }
+    .hero-title { font-size: 5rem; font-weight: 300; line-height: 1.05; margin-bottom: 1.5rem; background: linear-gradient(180deg, #ffffff 0%, #d8d8d8 60%, var(--accent) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+
+    .store-controls-container { background: var(--bg-card); border: 1px solid var(--border-subtle); padding: 2rem; display: flex; flex-direction: column; gap: 1.5rem; margin-bottom: 3rem; }
+    .store-search-row { display: flex; gap: 1.5rem; align-items: center; }
+    .search-box { position: relative; flex: 1; }
+    .search-box input { width: 100%; background: var(--bg-tertiary); border: 1px solid var(--border-subtle); padding: 0.9rem 1.2rem; color: var(--text-primary); outline: none; }
+    .sort-select { background: var(--bg-tertiary); border: 1px solid var(--border-subtle); color: var(--text-primary); padding: 0.85rem 1.2rem; outline: none; }
+
+    .filter-controls-row { display: flex; flex-wrap: wrap; gap: 2rem; justify-content: space-between; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.05); }
+    .filter-pills { display: flex; gap: 0.6rem; flex-wrap: wrap; }
+    .filter-btn, .price-btn { background: var(--bg-tertiary); border: 1px solid var(--border-subtle); color: var(--text-secondary); padding: 0.6rem 1.2rem; font-size: 0.82rem; cursor: pointer; }
+    .filter-btn.active, .price-btn.active { background: var(--accent); color: var(--bg-primary); border-color: var(--accent); font-weight: 500; }
+
+    .product-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.5rem; }
+    .product-card { background: var(--bg-secondary); border: 1px solid var(--border-subtle); position: relative; cursor: pointer; transition: var(--transition); display: flex; flex-direction: column; }
+    .product-card:hover { border-color: var(--border-color); transform: translateY(-8px); box-shadow: var(--shadow-luxury); }
+    .image-container { position: relative; width: 100%; aspect-ratio: 4/5; overflow: hidden; background: #0c0c0e; }
+    .product-image { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1); }
+    .product-card:hover .product-image { transform: scale(1.06); }
+    .product-info { padding: 1.5rem; display: flex; flex-direction: column; flex: 1; }
+    .product-title { font-size: 1.25rem; margin-bottom: 0.6rem; }
+    .product-price { font-family: var(--font-serif); font-size: 1.2rem; color: var(--accent); margin-bottom: 1rem; }
+
+    .btn-card-inquire { width: 100%; padding: 0.6rem; font-size: 0.75rem; text-transform: uppercase; background: var(--bg-tertiary); border: 1px solid var(--border-subtle); color: var(--text-secondary); cursor: pointer; }
+    .btn-card-inquire:hover { background: var(--accent); color: var(--bg-primary); }
+
+    .modal-overlay { position: fixed; inset: 0; background: rgba(0, 0, 0, 0.85); backdrop-filter: blur(12px); z-index: 2500; display: flex; align-items: center; justify-content: center; padding: 2rem; opacity: 0; visibility: hidden; transition: var(--transition); }
+    .modal-overlay.open { opacity: 1; visibility: visible; }
+    .modal-container { background: var(--bg-secondary); border: 1px solid var(--border-color); max-width: 1000px; width: 100%; max-height: 90vh; overflow-y: auto; position: relative; }
+    .modal-close-btn { position: absolute; top: 1.5rem; right: 1.5rem; background: rgba(0,0,0,0.5); border: 1px solid var(--border-subtle); color: var(--text-primary); width: 40px; height: 40px; font-size: 1.5rem; cursor: pointer; z-index: 10; }
+    .modal-content { display: grid; grid-template-columns: 1fr 1fr; }
+    .modal-gallery { padding: 2.5rem; background: var(--bg-tertiary); }
+    .modal-main-img { width: 100%; aspect-ratio: 4/5; object-fit: cover; }
+    .modal-details { padding: 3rem 2.5rem; display: flex; flex-direction: column; }
+    .modal-title { font-size: 2.2rem; margin-bottom: 1rem; }
+    .modal-price { font-family: var(--font-serif); font-size: 2rem; color: var(--accent-light); margin-bottom: 1.5rem; }
+
+    @media (max-width: 900px) { .product-grid { grid-template-columns: repeat(2, 1fr); } .modal-content { grid-template-columns: 1fr; } }
+    @media (max-width: 600px) { .product-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+
+    <div class="announcement-bar">
+        <p>✨ Handcrafted One-of-a-Kind Wearable Art | Studio Inquiries & Viewings: studio@mashaarcher.com</p>
+    </div>
+
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo-wrapper">
+                <span class="logo-text">MASHA ARCHER</span>
+                <span class="logo-subtitle">SAN FRANCISCO • ART-TO-WEAR</span>
+            </div>
+            <nav class="nav-menu">
+                <a href="#about">The Artist</a>
+                <a href="#store">Collections</a>
+                <a href="#contact">Inquiries</a>
+            </nav>
+            <div class="header-actions">
+                <button class="header-btn" id="inquiry-bag-trigger">
+                    <span>💼 Inquiry Bag</span>
+                    <span class="badge" id="inquiry-bag-badge">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1 class="hero-title">Art-to-Wear</h1>
+            <p>Majestic, elaborate, one-of-a-kind statement jewelry crafted by San Francisco artist Masha Archer.</p>
+            <a href="#store" class="btn btn-primary" style="margin-top: 1.5rem;">Explore Catalog</a>
+        </div>
+    </section>
+
+    <section id="store" class="section-container">
+        <div class="text-center" style="margin-bottom: 3rem;">
+            <span class="section-tag">Boutique Collection</span>
+            <h2 class="section-title">Available Masterpieces</h2>
+        </div>
+
+        <div class="store-controls-container">
+            <div class="store-search-row">
+                <div class="search-box">
+                    <input type="text" id="search-input" placeholder="Search by gemstone, style, or title (e.g. Gorget, Coral, Amber)...">
+                </div>
+                <select id="sort-select" class="sort-select">
+                    <option value="featured">Featured Order</option>
+                    <option value="price-asc">Price: Low to High</option>
+                    <option value="price-desc">Price: High to Low</option>
+                    <option value="name-asc">Name: A to Z</option>
+                </select>
+            </div>
+
+            <div class="filter-controls-row">
+                <div class="filter-pills" id="category-filters">
+                    <button class="filter-btn active" data-filter="all">All Pieces</button>
+                    <button class="filter-btn" data-filter="necklaces">Necklaces & Collars</button>
+                    <button class="filter-btn" data-filter="earrings">Earrings</button>
+                </div>
+                <div class="filter-pills" id="price-filters">
+                    <button class="price-btn active" data-price="all">All Prices</button>
+                    <button class="price-btn" data-price="under-500">Under $500</button>
+                    <button class="price-btn" data-price="500-2000">$500 – $2,000</button>
+                    <button class="price-btn" data-price="above-2000">$2,000+</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="product-grid" class="product-grid"></div>
+    </section>
+
+    <!-- Modal -->
+    <div id="product-modal" class="modal-overlay">
+        <div class="modal-container">
+            <button id="modal-close" class="modal-close-btn">&times;</button>
+            <div class="modal-content">
+                <div class="modal-gallery">
+                    <img id="modal-product-image" src="" alt="" class="modal-main-img">
+                </div>
+                <div class="modal-details">
+                    <span class="section-tag">San Francisco Studio Original</span>
+                    <h2 id="modal-product-title" class="modal-title"></h2>
+                    <div id="modal-product-price" class="modal-price"></div>
+                    <div id="modal-product-desc" style="margin-bottom: 2rem;"></div>
+                    <a id="modal-inquiry-btn" href="#" class="btn btn-primary btn-block">Send Email Inquiry</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    const PRODUCTS_DATA = [
+      { id: "1", title: "Masha Archer Red and Black Collar", category: "necklaces", price: "$2,375.00", priceNumeric: 2375, img: "https://images.squarespace-cdn.com/content/v1/56df36ce2fe1316ffbfe01f6/1633625391462-41J3OO24P0OLHZQU4EC0/IMG_7465%2Bsmall.jpg" },
+      { id: "2", title: "Masha Archer Plum Wreath #3 Necklace", category: "necklaces", price: "$575.00", priceNumeric: 575, img: "https://images.squarespace-cdn.com/content/v1/56df36ce2fe1316ffbfe01f6/1633629496518-ULAX7BJ5YSUXLUG7E2E1/IMG_7487.jpg" },
+      { id: "3", title: "Masha Archer Black and Red Wreath", category: "necklaces", price: "$575.00", priceNumeric: 575, img: "https://images.squarespace-cdn.com/content/v1/56df36ce2fe1316ffbfe01f6/1609288606625-GMM0CS1JDH3O6IYZNUO7/IMG_7467+cropped.jpg" },
+      { id: "4", title: "Masha Archer The Merry Widow", category: "necklaces", price: "$2,475.00", priceNumeric: 2475, img: "https://images.squarespace-cdn.com/content/v1/56df36ce2fe1316ffbfe01f6/1609288949185-7GS9C42P1WBY7PPJ30R1/IMG_7477+cropped.jpg" },
+      { id: "5", title: "Masha Archer Black and Green Collar", category: "necklaces", price: "$3,675.00", priceNumeric: 3675, img: "https://images.squarespace-cdn.com/content/v1/56df36ce2fe1316ffbfe01f6/1609288815271-GKYL0COJODICN06Y6C10/IMG_7472+cropped.jpg" },
+      { id: "6", title: "Masha Archer The Main Hearth", category: "necklaces", price: "$2,675.00", priceNumeric: 2675, img: "https://images.squarespace-cdn.com/content/v1/56df36ce2fe1316ffbfe01f6/1609289269421-GG018S41R4W783U1LLZ3/IMG_7492+cropped.jpg" },
+      { id: "7", title: "Masha Archer Green and Red Collar #4", category: "necklaces", price: "$2,875.00", priceNumeric: 2875, img: "https://images.squarespace-cdn.com/content/v1/56df36ce2fe1316ffbfe01f6/1756711053600-UIZWLXFU38N0UTFRFF9W/F57B6975-AFB7-4F3B-9494-B22BB488C136.jpeg" },
+      { id: "8", title: "Masha Archer Blue and Black Wreath #10B", category: "necklaces", price: "$375.00", priceNumeric: 375, img: "https://images.squarespace-cdn.com/content/v1/56df36ce2fe1316ffbfe01f6/1756596659591-4IHJXLLQ2M3GRKZOGLD2/211A1143-49A1-4C2C-98F9-09472DC23F76.jpeg" },
+      { id: "9", title: "Masha Archer Blue Gorget #10", category: "necklaces", price: "$1,875.00", priceNumeric: 1875, img: "https://images.squarespace-cdn.com/content/v1/56df36ce2fe1316ffbfe01f6/1756594836302-79QXMPKDXJLBIVBK892L/F9E2B23C-A055-47BF-B59D-484469BC83AA.jpeg" },
+      { id: "10", title: "Masha Archer Turquoise and Red Gorget #12", category: "necklaces", price: "$1,275.00", priceNumeric: 1275, img: "https://images.squarespace-cdn.com/content/v1/56df36ce2fe1316ffbfe01f6/1756600775149-3BNDQYKDLC2P8AYZB89G/5ED86597-1BBC-469F-A65B-5A56A6DE2412.jpeg" },
+      { id: "11", title: "Masha Archer White and Blue Wreath", category: "necklaces", price: "$475.00", priceNumeric: 475, img: "https://images.squarespace-cdn.com/content/v1/56df36ce2fe1316ffbfe01f6/1609288310168-TZFJ325R5NI4V3CP40MS/IMG_7452+cropped.jpg" },
+      { id: "12", title: "Masha Archer Lavender Mint Glass Collar", category: "necklaces", price: "$1,950.00", priceNumeric: 1950, img: "https://images.squarespace-cdn.com/content/v1/56df36ce2fe1316ffbfe01f6/1609287389958-WC5C3AQJZSF5PHJXP0RU/IMG_7412+cropped.jpg" },
+      { id: "13", title: "Masha Archer White Opalite Spectator", category: "necklaces", price: "$2,375.00", priceNumeric: 2375, img: "https://images.squarespace-cdn.com/content/v1/56df36ce2fe1316ffbfe01f6/1633624740936-W3SK02XRUGWK71MZR2CR/IMG_7460%2Bsmall.jpg" },
+      { id: "14", title: "Masha Archer Turquoise Opalite Wreath #6", category: "necklaces", price: "$1,750.00", priceNumeric: 1750, img: "https://images.squarespace-cdn.com/content/v1/56df36ce2fe1316ffbfe01f6/1756602649501-PHZP8RM93O5D2NXYKOTE/B80BB048-0C9B-4ABE-979B-787B8D9203BE.jpeg" },
+      { id: "15", title: "Masha Archer White Opalite Pastel Wreath #2", category: "necklaces", price: "$575.00", priceNumeric: 575, img: "https://images.squarespace-cdn.com/content/v1/56df36ce2fe1316ffbfe01f6/1756602999633-YAUCKPQNTH7EMTI4TQAD/9DD7ABAA-8F12-4F20-9909-0167D3EBDCBF.jpeg" },
+      { id: "16", title: "Masha Archer Tear Drop Wreath #3", category: "necklaces", price: "$675.00", priceNumeric: 675, img: "https://images.squarespace-cdn.com/content/v1/56df36ce2fe1316ffbfe01f6/1756603471256-5FBLME5LP1W2DQTFGD7X/CCEA4B28-20E0-4E15-A90E-D145E181BA67.jpeg" },
+      { id: "17", title: "Masha Archer Saffron Ziggurat #3b", category: "necklaces", price: "$2,875.00", priceNumeric: 2875, img: "https://images.squarespace-cdn.com/content/v1/56df36ce2fe1316ffbfe01f6/1633627528528-UQT955D2BSDA41NFZ0RT/IMG_7471.JPEG" },
+      { id: "18", title: "Masha Archer Himalayan Wreath #3y", category: "necklaces", price: "$1,750.00", priceNumeric: 1750, img: "https://images.squarespace-cdn.com/content/v1/56df36ce2fe1316ffbfe01f6/1756710996227-GNTJVI1DGPTDPXKMQVGF/63895108-97F5-4D7C-B6E2-B206247986C9.jpeg" },
+      { id: "19", title: "Masha Archer Spiral Motif Earrings", category: "earrings", price: "$225.00", priceNumeric: 225, img: "https://images.squarespace-cdn.com/content/v1/56df36ce2fe1316ffbfe01f6/1633630455961-BKQRAIQ1K2Y4N4KFPIGZ/IMG_7512+small.JPEG" },
+      { id: "20", title: "Masha Archer 'Mahgreb Series' Copal Earrings", category: "earrings", price: "$225.00", priceNumeric: 225, img: "https://images.squarespace-cdn.com/content/v1/56df36ce2fe1316ffbfe01f6/1633630561342-OFP12L7CLKW6KBCQKYQM/IMG_7518+small.JPEG" },
+      { id: "21", title: "Masha Archer Rose Opalite Earrings", category: "earrings", price: "$225.00", priceNumeric: 225, img: "https://images.squarespace-cdn.com/content/v1/56df36ce2fe1316ffbfe01f6/1757035114925-VZ3W1P5NJZGXY8VYN499/342DF423-E410-47B9-B954-211B377DD2AC.jpeg" },
+      { id: "22", title: "Masha Archer Chalcedony Earrings", category: "earrings", price: "$225.00", priceNumeric: 225, img: "https://images.squarespace-cdn.com/content/v1/56df36ce2fe1316ffbfe01f6/1757035310287-APLQQN0SPF4JRPVCBLXN/F871B588-3AD1-4165-906D-B65D6D2B97DA.jpeg" },
+      { id: "23", title: "Masha Archer Amber Earrings", category: "earrings", price: "$225.00", priceNumeric: 225, img: "https://images.squarespace-cdn.com/content/v1/56df36ce2fe1316ffbfe01f6/1757035358064-SNOTUNKDP1BEHIM2F044/4B4BEC0B-A03C-4450-ABD2-442A6EC606D5.jpeg" },
+      { id: "24", title: "Masha Archer Howlite Earrings", category: "earrings", price: "$225.00", priceNumeric: 225, img: "https://images.squarespace-cdn.com/content/v1/56df36ce2fe1316ffbfe01f6/1757035551060-33KCAUCTX111TKXKONLF/2C5707C5-44FE-4E84-AFA7-C918D5F6765B.jpeg" }
+    ];
+
+    document.addEventListener('DOMContentLoaded', () => {
+        renderProducts();
+        setupFilters();
+    });
+
+    function renderProducts() {
+        const grid = document.getElementById('product-grid');
+        const query = (document.getElementById('search-input').value || '').toLowerCase().trim();
+        const activeCat = document.querySelector('#category-filters .filter-btn.active').dataset.filter;
+        const activePrice = document.querySelector('#price-filters .price-btn.active').dataset.price;
+        const sortVal = document.getElementById('sort-select').value;
+
+        let filtered = PRODUCTS_DATA.filter(p => {
+            const matchesCat = activeCat === 'all' || p.category === activeCat;
+            let matchesPrice = true;
+            if (activePrice === 'under-500') matchesPrice = p.priceNumeric < 500;
+            else if (activePrice === '500-2000') matchesPrice = p.priceNumeric >= 500 && p.priceNumeric <= 2000;
+            else if (activePrice === 'above-2000') matchesPrice = p.priceNumeric > 2000;
+
+            const matchesSearch = query === '' || p.title.toLowerCase().includes(query);
+            return matchesCat && matchesPrice && matchesSearch;
+        });
+
+        if (sortVal === 'price-asc') filtered.sort((a,b) => a.priceNumeric - b.priceNumeric);
+        else if (sortVal === 'price-desc') filtered.sort((a,b) => b.priceNumeric - a.priceNumeric);
+        else if (sortVal === 'name-asc') filtered.sort((a,b) => a.title.localeCompare(b.title));
+
+        grid.innerHTML = filtered.map(p => `
+            <div class="product-card" onclick="openModal('${p.id}')">
+                <div class="image-container">
+                    <img src="${p.img}" alt="${p.title}" class="product-image" loading="lazy">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">${p.title}</h3>
+                    <p class="product-price">${p.price}</p>
+                    <button class="btn-card-inquire">View & Inquire</button>
+                </div>
+            </div>
+        `).join('');
+    }
+
+    function setupFilters() {
+        document.getElementById('search-input').addEventListener('input', renderProducts);
+        document.getElementById('sort-select').addEventListener('change', renderProducts);
+
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.onclick = () => {
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                renderProducts();
+            };
+        });
+
+        document.querySelectorAll('.price-btn').forEach(btn => {
+            btn.onclick = () => {
+                document.querySelectorAll('.price-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                renderProducts();
+            };
+        });
+
+        document.getElementById('modal-close').onclick = () => {
+            document.getElementById('product-modal').classList.remove('open');
+        };
+    }
+
+    function openModal(id) {
+        const item = PRODUCTS_DATA.find(p => p.id === id);
+        if (!item) return;
+
+        document.getElementById('modal-product-title').textContent = item.title;
+        document.getElementById('modal-product-price').textContent = item.price;
+        document.getElementById('modal-product-image').src = item.img;
+        document.getElementById('modal-product-desc').innerHTML = `
+            <p>One-of-a-kind wearable art handcrafted by San Francisco artist Masha Archer.</p>
+        `;
+
+        const subject = encodeURIComponent(`Acquisition Inquiry: ${item.title}`);
+        document.getElementById('modal-inquiry-btn').href = `mailto:studio@mashaarcher.com?subject=${subject}`;
+        document.getElementById('product-modal').classList.add('open');
+    }
+    </script>
+</body>
+</html>
