@@ -8,8 +8,8 @@ const PRODUCTS_DATA = [
     "price": "$2,375.00",
     "priceNumeric": 2375,
     "url": "https://www.thejewelonline.com/mashaarcher/red-and-black-collar",
-    "primary_image_rel": "reseller_images/masha_archer_red_and_black_collar.jpg",
-    "alternate_image_rel": "reseller_images/masha_archer_red_and_black_collar_alt.jpeg"
+    "primary_image_rel": "https://raw.githubusercontent.com/kaiSorus-tessell/masha-archer/main/reseller_images/masha_archer_red_and_black_collar.jpg",
+    "alternate_image_rel": "https://raw.githubusercontent.com/kaiSorus-tessell/masha-archer/main/reseller_images/masha_archer_red_and_black_collar_alt.jpeg"
   },
   {
     "id": "plum-wreath-3-necklace",
@@ -18,8 +18,8 @@ const PRODUCTS_DATA = [
     "price": "$575.00",
     "priceNumeric": 575,
     "url": "https://www.thejewelonline.com/mashaarcher/plum-wreath-3-necklace",
-    "primary_image_rel": "reseller_images/masha_archer_plum_wreath_3_necklace.jpg",
-    "alternate_image_rel": "reseller_images/masha_archer_plum_wreath_3_necklace_alt.jpeg"
+    "primary_image_rel": "https://raw.githubusercontent.com/kaiSorus-tessell/masha-archer/main/reseller_images/masha_archer_plum_wreath_3_necklace.jpg",
+    "alternate_image_rel": "https://raw.githubusercontent.com/kaiSorus-tessell/masha-archer/main/reseller_images/masha_archer_plum_wreath_3_necklace_alt.jpeg"
   },
   {
     "id": "black-and-red-wreath",
@@ -28,8 +28,8 @@ const PRODUCTS_DATA = [
     "price": "$575.00",
     "priceNumeric": 575,
     "url": "https://www.thejewelonline.com/mashaarcher/black-and-red-wreath",
-    "primary_image_rel": "reseller_images/masha_archer_black_and_red_wreath.jpg",
-    "alternate_image_rel": "reseller_images/masha_archer_black_and_red_wreath_alt.jpg"
+    "primary_image_rel": "https://raw.githubusercontent.com/kaiSorus-tessell/masha-archer/main/reseller_images/masha_archer_black_and_red_wreath.jpg",
+    "alternate_image_rel": "https://raw.githubusercontent.com/kaiSorus-tessell/masha-archer/main/reseller_images/masha_archer_black_and_red_wreath_alt.jpg"
   },
   {
     "id": "the-merry-widow",
@@ -38,8 +38,8 @@ const PRODUCTS_DATA = [
     "price": "$2,475.00",
     "priceNumeric": 2475,
     "url": "https://www.thejewelonline.com/mashaarcher/the-merry-widow",
-    "primary_image_rel": "reseller_images/masha_archer_the_merry_widow.jpg",
-    "alternate_image_rel": "reseller_images/masha_archer_the_merry_widow_alt.jpg"
+    "primary_image_rel": "https://raw.githubusercontent.com/kaiSorus-tessell/masha-archer/main/reseller_images/masha_archer_the_merry_widow.jpg",
+    "alternate_image_rel": "https://raw.githubusercontent.com/kaiSorus-tessell/masha-archer/main/reseller_images/masha_archer_the_merry_widow_alt.jpg"
   },
   {
     "id": "black-and-green-collar",
@@ -48,8 +48,8 @@ const PRODUCTS_DATA = [
     "price": "$3,675.00",
     "priceNumeric": 3675,
     "url": "https://www.thejewelonline.com/mashaarcher/black-and-green-collar",
-    "primary_image_rel": "reseller_images/masha_archer_black_and_green_collar.jpg",
-    "alternate_image_rel": "reseller_images/masha_archer_black_and_green_collar_alt.jpg"
+    "primary_image_rel": "https://raw.githubusercontent.com/kaiSorus-tessell/masha-archer/main/reseller_images/masha_archer_black_and_green_collar.jpg",
+    "alternate_image_rel": "https://raw.githubusercontent.com/kaiSorus-tessell/masha-archer/main/reseller_images/masha_archer_black_and_green_collar_alt.jpg"
   },
   {
     "id": "the-main-hearth",
@@ -58,8 +58,8 @@ const PRODUCTS_DATA = [
     "price": "$2,675.00",
     "priceNumeric": 2675,
     "url": "https://www.thejewelonline.com/mashaarcher/the-main-hearth",
-    "primary_image_rel": "reseller_images/masha_archer_the_main_hearth.jpg",
-    "alternate_image_rel": "reseller_images/masha_archer_the_main_hearth_alt.jpg"
+    "primary_image_rel": "https://raw.githubusercontent.com/kaiSorus-tessell/masha-archer/main/reseller_images/masha_archer_the_main_hearth.jpg",
+    "alternate_image_rel": "https://raw.githubusercontent.com/kaiSorus-tessell/masha-archer/main/reseller_images/masha_archer_the_main_hearth_alt.jpg"
   },
   {
     "id": "green-and-red-collar-4",
@@ -68,8 +68,8 @@ const PRODUCTS_DATA = [
     "price": "$2,875.00",
     "priceNumeric": 2875,
     "url": "https://www.thejewelonline.com/mashaarcher/jp6qo9ufn6w5geb3ck0gpnhoi3q0s4",
-    "primary_image_rel": "reseller_images/masha_archer_green_and_red_collar_4.jpeg",
-    "alternate_image_rel": "reseller_images/masha_archer_green_and_red_collar_4_alt.jpeg"
+    "primary_image_rel": "https://raw.githubusercontent.com/kaiSorus-tessell/masha-archer/main/reseller_images/masha_archer_green_and_red_collar_4.jpeg",
+    "alternate_image_rel": "https://raw.githubusercontent.com/kaiSorus-tessell/masha-archer/main/reseller_images/masha_archer_green_and_red_collar_4_alt.jpeg"
   },
   {
     "id": "blue-and-black-wreath-10b",
@@ -78,8 +78,8 @@ const PRODUCTS_DATA = [
     "price": "$375.00",
     "priceNumeric": 375,
     "url": "https://www.thejewelonline.com/mashaarcher/dz9bx9fn3j2xgm9varfc4vei41j25r",
-    "primary_image_rel": "reseller_images/masha_archer_blue_and_black_wreath_10b.jpeg",
-    "alternate_image_rel": "reseller_images/masha_archer_blue_and_black_wreath_10b_alt.jpeg"
+    "primary_image_rel": "https://raw.githubusercontent.com/kaiSorus-tessell/masha-archer/main/reseller_images/masha_archer_blue_and_black_wreath_10b.jpeg",
+    "alternate_image_rel": "https://raw.githubusercontent.com/kaiSorus-tessell/masha-archer/main/reseller_images/masha_archer_blue_and_black_wreath_10b_alt.jpeg"
   },
   {
     "id": "blue-gorget-10",
@@ -88,8 +88,8 @@ const PRODUCTS_DATA = [
     "price": "$1,875.00",
     "priceNumeric": 1875,
     "url": "https://www.thejewelonline.com/mashaarcher/yzndb4gk53lw2r65o2zumukazuywok",
-    "primary_image_rel": "reseller_images/masha_archer_blue_gorget_10.jpeg",
-    "alternate_image_rel": "reseller_images/masha_archer_blue_gorget_10_alt.jpeg"
+    "primary_image_rel": "https://raw.githubusercontent.com/kaiSorus-tessell/masha-archer/main/reseller_images/masha_archer_blue_gorget_10.jpeg",
+    "alternate_image_rel": "https://raw.githubusercontent.com/kaiSorus-tessell/masha-archer/main/reseller_images/masha_archer_blue_gorget_10_alt.jpeg"
   },
   {
     "id": "turquoise-and-red-gorget-12",
@@ -98,8 +98,8 @@ const PRODUCTS_DATA = [
     "price": "$1,275.00",
     "priceNumeric": 1275,
     "url": "https://www.thejewelonline.com/mashaarcher/is2fd478d50xddmpao4rsovs91km7o",
-    "primary_image_rel": "reseller_images/masha_archer_turquoise_and_red_gorget_12.jpeg",
-    "alternate_image_rel": "reseller_images/masha_archer_turquoise_and_red_gorget_12_alt.jpeg"
+    "primary_image_rel": "https://raw.githubusercontent.com/kaiSorus-tessell/masha-archer/main/reseller_images/masha_archer_turquoise_and_red_gorget_12.jpeg",
+    "alternate_image_rel": "https://raw.githubusercontent.com/kaiSorus-tessell/masha-archer/main/reseller_images/masha_archer_turquoise_and_red_gorget_12_alt.jpeg"
   },
   {
     "id": "white-and-blue-wreath",
@@ -108,8 +108,8 @@ const PRODUCTS_DATA = [
     "price": "$475.00",
     "priceNumeric": 475,
     "url": "https://www.thejewelonline.com/mashaarcher/white-and-blue-wreath",
-    "primary_image_rel": "reseller_images/masha_archer_white_and_blue_wreath.jpg",
-    "alternate_image_rel": "reseller_images/masha_archer_white_and_blue_wreath_alt.jpg"
+    "primary_image_rel": "https://raw.githubusercontent.com/kaiSorus-tessell/masha-archer/main/reseller_images/masha_archer_white_and_blue_wreath.jpg",
+    "alternate_image_rel": "https://raw.githubusercontent.com/kaiSorus-tessell/masha-archer/main/reseller_images/masha_archer_white_and_blue_wreath_alt.jpg"
   },
   {
     "id": "lavender-mint-glass-mint-collar",
@@ -118,8 +118,8 @@ const PRODUCTS_DATA = [
     "price": "$1,950.00",
     "priceNumeric": 1950,
     "url": "https://www.thejewelonline.com/mashaarcher/lavender-mint-glass-mint-collar",
-    "primary_image_rel": "reseller_images/masha_archer_lavender_mint_glass_mint_collar.jpg",
-    "alternate_image_rel": "reseller_images/masha_archer_lavender_mint_glass_mint_collar_alt.jpg"
+    "primary_image_rel": "https://raw.githubusercontent.com/kaiSorus-tessell/masha-archer/main/reseller_images/masha_archer_lavender_mint_glass_mint_collar.jpg",
+    "alternate_image_rel": "https://raw.githubusercontent.com/kaiSorus-tessell/masha-archer/main/reseller_images/masha_archer_lavender_mint_glass_mint_collar_alt.jpg"
   },
   {
     "id": "white-opalite-spectator",
@@ -128,8 +128,8 @@ const PRODUCTS_DATA = [
     "price": "$2,375.00",
     "priceNumeric": 2375,
     "url": "https://www.thejewelonline.com/mashaarcher/ixmltyuyzxo0fda66x0qnlrc7c0vel",
-    "primary_image_rel": "reseller_images/masha_archer_white_opalite_spectator.jpg",
-    "alternate_image_rel": "reseller_images/masha_archer_white_opalite_spectator_alt.jpeg"
+    "primary_image_rel": "https://raw.githubusercontent.com/kaiSorus-tessell/masha-archer/main/reseller_images/masha_archer_white_opalite_spectator.jpg",
+    "alternate_image_rel": "https://raw.githubusercontent.com/kaiSorus-tessell/masha-archer/main/reseller_images/masha_archer_white_opalite_spectator_alt.jpeg"
   },
   {
     "id": "turquoise-opalite-wreath-6",
@@ -138,8 +138,8 @@ const PRODUCTS_DATA = [
     "price": "$1,750.00",
     "priceNumeric": 1750,
     "url": "https://www.thejewelonline.com/mashaarcher/kkeikxcaharclysyq8huw6igj0dnwj",
-    "primary_image_rel": "reseller_images/masha_archer_turquoise_opalite_wreath_6.jpeg",
-    "alternate_image_rel": "reseller_images/masha_archer_turquoise_opalite_wreath_6_alt.jpeg"
+    "primary_image_rel": "https://raw.githubusercontent.com/kaiSorus-tessell/masha-archer/main/reseller_images/masha_archer_turquoise_opalite_wreath_6.jpeg",
+    "alternate_image_rel": "https://raw.githubusercontent.com/kaiSorus-tessell/masha-archer/main/reseller_images/masha_archer_turquoise_opalite_wreath_6_alt.jpeg"
   },
   {
     "id": "white-opalite-pastel-wreath-2",
@@ -148,8 +148,8 @@ const PRODUCTS_DATA = [
     "price": "$575.00",
     "priceNumeric": 575,
     "url": "https://www.thejewelonline.com/mashaarcher/0b5ujqt9fyg167m8nzn7bv2kl8kaq0",
-    "primary_image_rel": "reseller_images/masha_archer_white_opalite_pastel_wreath_2.jpeg",
-    "alternate_image_rel": "reseller_images/masha_archer_white_opalite_pastel_wreath_2_alt.jpeg"
+    "primary_image_rel": "https://raw.githubusercontent.com/kaiSorus-tessell/masha-archer/main/reseller_images/masha_archer_white_opalite_pastel_wreath_2.jpeg",
+    "alternate_image_rel": "https://raw.githubusercontent.com/kaiSorus-tessell/masha-archer/main/reseller_images/masha_archer_white_opalite_pastel_wreath_2_alt.jpeg"
   },
   {
     "id": "tear-drop-wreath-3",
@@ -158,8 +158,8 @@ const PRODUCTS_DATA = [
     "price": "$675.00",
     "priceNumeric": 675,
     "url": "https://www.thejewelonline.com/mashaarcher/v0dkmjr3hi5fkmzjehxk68da6k50fe",
-    "primary_image_rel": "reseller_images/masha_archer_tear_drop_wreath_3.jpeg",
-    "alternate_image_rel": "reseller_images/masha_archer_tear_drop_wreath_3_alt.jpeg"
+    "primary_image_rel": "https://raw.githubusercontent.com/kaiSorus-tessell/masha-archer/main/reseller_images/masha_archer_tear_drop_wreath_3.jpeg",
+    "alternate_image_rel": "https://raw.githubusercontent.com/kaiSorus-tessell/masha-archer/main/reseller_images/masha_archer_tear_drop_wreath_3_alt.jpeg"
   },
   {
     "id": "saffron-ziggurat-3b",
@@ -168,8 +168,8 @@ const PRODUCTS_DATA = [
     "price": "$2,875.00",
     "priceNumeric": 2875,
     "url": "https://www.thejewelonline.com/mashaarcher/twvsy042ix4973n2vu4i59l0n169tr",
-    "primary_image_rel": "reseller_images/masha_archer_saffron_ziggurat_3b.jpeg",
-    "alternate_image_rel": "reseller_images/masha_archer_saffron_ziggurat_3b_alt.jpeg"
+    "primary_image_rel": "https://raw.githubusercontent.com/kaiSorus-tessell/masha-archer/main/reseller_images/masha_archer_saffron_ziggurat_3b.jpeg",
+    "alternate_image_rel": "https://raw.githubusercontent.com/kaiSorus-tessell/masha-archer/main/reseller_images/masha_archer_saffron_ziggurat_3b_alt.jpeg"
   },
   {
     "id": "himalayan-wreath-3y",
@@ -178,8 +178,8 @@ const PRODUCTS_DATA = [
     "price": "$1,750.00",
     "priceNumeric": 1750,
     "url": "https://www.thejewelonline.com/mashaarcher/tlg0dba783ojabyerhv7dscaqigcss",
-    "primary_image_rel": "reseller_images/masha_archer_himalayan_wreath_3y.jpeg",
-    "alternate_image_rel": "reseller_images/masha_archer_himalayan_wreath_3y_alt.jpeg"
+    "primary_image_rel": "https://raw.githubusercontent.com/kaiSorus-tessell/masha-archer/main/reseller_images/masha_archer_himalayan_wreath_3y.jpeg",
+    "alternate_image_rel": "https://raw.githubusercontent.com/kaiSorus-tessell/masha-archer/main/reseller_images/masha_archer_himalayan_wreath_3y_alt.jpeg"
   },
   {
     "id": "spiral-motif-earrings",
@@ -188,8 +188,8 @@ const PRODUCTS_DATA = [
     "price": "$225.00",
     "priceNumeric": 225,
     "url": "https://www.thejewelonline.com/mashaarcher/spiral-motif-earrings",
-    "primary_image_rel": "reseller_images/masha_archer_spiral_motif_earrings.jpeg",
-    "alternate_image_rel": "reseller_images/masha_archer_spiral_motif_earrings_alt.jpeg"
+    "primary_image_rel": "https://raw.githubusercontent.com/kaiSorus-tessell/masha-archer/main/reseller_images/masha_archer_spiral_motif_earrings.jpeg",
+    "alternate_image_rel": "https://raw.githubusercontent.com/kaiSorus-tessell/masha-archer/main/reseller_images/masha_archer_spiral_motif_earrings_alt.jpeg"
   },
   {
     "id": "mahgreb-series-copal-earrings",
@@ -198,8 +198,8 @@ const PRODUCTS_DATA = [
     "price": "$225.00",
     "priceNumeric": 225,
     "url": "https://www.thejewelonline.com/mashaarcher/mahgreb-series-copal-earrings",
-    "primary_image_rel": "reseller_images/masha_archer_mahgreb_series_copal_earrings.jpeg",
-    "alternate_image_rel": "reseller_images/masha_archer_mahgreb_series_copal_earrings_alt.jpeg"
+    "primary_image_rel": "https://raw.githubusercontent.com/kaiSorus-tessell/masha-archer/main/reseller_images/masha_archer_mahgreb_series_copal_earrings.jpeg",
+    "alternate_image_rel": "https://raw.githubusercontent.com/kaiSorus-tessell/masha-archer/main/reseller_images/masha_archer_mahgreb_series_copal_earrings_alt.jpeg"
   },
   {
     "id": "rose-opalite-earrings",
@@ -208,8 +208,8 @@ const PRODUCTS_DATA = [
     "price": "$225.00",
     "priceNumeric": 225,
     "url": "https://www.thejewelonline.com/mashaarcher/rose-opalite-earrings",
-    "primary_image_rel": "reseller_images/masha_archer_rose_opalite_earrings.jpeg",
-    "alternate_image_rel": "reseller_images/masha_archer_rose_opalite_earrings_alt.jpeg"
+    "primary_image_rel": "https://raw.githubusercontent.com/kaiSorus-tessell/masha-archer/main/reseller_images/masha_archer_rose_opalite_earrings.jpeg",
+    "alternate_image_rel": "https://raw.githubusercontent.com/kaiSorus-tessell/masha-archer/main/reseller_images/masha_archer_rose_opalite_earrings_alt.jpeg"
   },
   {
     "id": "chalcedony-earrings",
@@ -218,8 +218,8 @@ const PRODUCTS_DATA = [
     "price": "$225.00",
     "priceNumeric": 225,
     "url": "https://www.thejewelonline.com/mashaarcher/chalcedony-earrings",
-    "primary_image_rel": "reseller_images/masha_archer_chalcedony_earrings.jpeg",
-    "alternate_image_rel": "reseller_images/masha_archer_chalcedony_earrings_alt.jpeg"
+    "primary_image_rel": "https://raw.githubusercontent.com/kaiSorus-tessell/masha-archer/main/reseller_images/masha_archer_chalcedony_earrings.jpeg",
+    "alternate_image_rel": "https://raw.githubusercontent.com/kaiSorus-tessell/masha-archer/main/reseller_images/masha_archer_chalcedony_earrings_alt.jpeg"
   },
   {
     "id": "amber-earrings",
@@ -228,8 +228,8 @@ const PRODUCTS_DATA = [
     "price": "$225.00",
     "priceNumeric": 225,
     "url": "https://www.thejewelonline.com/mashaarcher/amber-earrings",
-    "primary_image_rel": "reseller_images/masha_archer_amber_earrings.jpeg",
-    "alternate_image_rel": "reseller_images/masha_archer_amber_earrings_alt.jpeg"
+    "primary_image_rel": "https://raw.githubusercontent.com/kaiSorus-tessell/masha-archer/main/reseller_images/masha_archer_amber_earrings.jpeg",
+    "alternate_image_rel": "https://raw.githubusercontent.com/kaiSorus-tessell/masha-archer/main/reseller_images/masha_archer_amber_earrings_alt.jpeg"
   },
   {
     "id": "howlite-earrings",
@@ -238,8 +238,8 @@ const PRODUCTS_DATA = [
     "price": "$225.00",
     "priceNumeric": 225,
     "url": "https://www.thejewelonline.com/mashaarcher/howlite-earrings",
-    "primary_image_rel": "reseller_images/masha_archer_howlite_earrings.jpeg",
-    "alternate_image_rel": "reseller_images/masha_archer_howlite_earrings_alt.jpeg"
+    "primary_image_rel": "https://raw.githubusercontent.com/kaiSorus-tessell/masha-archer/main/reseller_images/masha_archer_howlite_earrings.jpeg",
+    "alternate_image_rel": "https://raw.githubusercontent.com/kaiSorus-tessell/masha-archer/main/reseller_images/masha_archer_howlite_earrings_alt.jpeg"
   }
 ];
 
